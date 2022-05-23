@@ -1,0 +1,191 @@
+.home {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  color: #f9fafc;
+  overflow: hidden;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-attachment: fixed;
+  background-position: center;
+  transform: scale(1.1);
+  filter: blur(3px);
+  background-size: cover;
+}
+
+/*
+  Resolves https://github.com/hossainemruz/toha/issues/70
+
+  fixed attached images use the whole <body> size. On mobile this can get really
+  tall which blows your image out. Setting the attachment back to scroll allows
+  your cover image to stretch within its own container
+*/
+@supports (-webkit-touch-callout: none) {
+  .background {
+    background-attachment: scroll;
+  }
+}
+
+.content {
+  position: relative;
+  top: -65%;
+  height: 60%;
+}
+
+.home img {
+  width: 148px;
+  height: 148px;
+  background-color: #efe7e7;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.home .greeting, .home .greeting-subtitle {
+  color: #0a0a0a;
+}
+
+.home .typing-carousel {
+  font-family: Verdana, Tahoma, sans-serif; 
+  font-size:30px; 
+  margin: 10px 50px; 
+  letter-spacing: 6px; 
+  font-weight: bold;
+  color: rgb(238, 17, 17);
+  animation: bounce 1s steps(20, end) forwards;
+}
+
+#typing-carousel-data {
+display: none;
+}
+
+.arrow {
+  position: absolute;
+  color: #0a59f8;
+  font-size: 1.5rem;
+  bottom: 0;
+}
+
+.c1{
+  display: inline-block;
+}
+.c2{
+  display: inline-block;
+}
+.c3{
+  display: inline-block;
+}
+.c4{
+  display: inline-block;
+}
+h1 .type1{
+  font-size: 1.5rem;
+  overflow: hidden;
+  border-right: .15em solid rgb(201, 201, 201);
+  white-space: nowrap; 
+  width: 0;
+  animation: 
+    typing 2s steps(25, end) forwards;
+}
+h1 .type2{
+  font-size: 1.5rem; 
+  overflow: hidden;
+  border-right: .15em solid rgb(201, 201, 201);
+  white-space: nowrap; 
+  width: 0;
+  animation: 
+    typing 2s steps(25, end) forwards;
+ 
+}
+h1 .type3{
+  font-size: 1.5rem; 
+  overflow: hidden;
+  border-right: .15em solid rgb(201, 201, 201); 
+  white-space: nowrap; 
+  width: 0;
+  animation: 
+    typing 2s steps(25, end) forwards;
+  
+}
+h1 .type4{
+  font-size: 1.5rem; 
+  overflow: hidden;
+  border-right: .15em solid rgb(201, 201, 201); 
+  white-space: nowrap; 
+  width: 0;
+  animation: 
+    typing 2s steps(25, end) forwards;
+  
+}
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+@keyframes blink {
+from { border-color: transparent }
+to { border-color: rgb(201, 201, 201); }
+}
+
+/* ============= Device specific fixes ======= */
+
+/* Large screens such as TV */
+@media only screen and (min-width: 1824px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+/* IPad Pro */
+@media (max-width: 1024px) {
+}
+
+/*  Large devices (desktops, 992px and up) */
+
+@media (max-width: 992px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media only screen and (max-width: 768px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media only screen and (max-width: 576px) {
+  .content {
+    position: relative;
+    top: -75%;
+    height: 65%;
+  }
+
+  .home img {
+    width: 140px;
+    max-width: 50%;
+    height: auto;
+  }
+
+  .home .greeting {
+    font-size: 24pt;
+  }
+}
+
+/* iPhoneX, iPhone 6,7,8 */
+@media only screen and (max-width: 375px) {
+}
+
+/* Galaxy S5, Moto G4 */
+@media only screen and (max-width: 360px) {
+}
+
+/* iPhone 5 or before */
+@media only screen and (max-width: 320px) {
+}
